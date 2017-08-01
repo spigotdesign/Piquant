@@ -1,0 +1,28 @@
+//
+// Grid
+//
+
+#article-list {
+  padding: $margin * 2;
+  width: 100%;
+  column-count: 1;
+  column-gap: $margin * 2;
+
+  @include mq(phone-only) {
+    padding: 12px;
+  }
+
+
+  @include mq(tablet-portrait-up) { column-count: 2; }
+  @include mq(tablet-landscape-up) { column-count: 3; }
+  @include mq(desktop-up) { column-count: 4; }
+  @include mq(big-desktop-up) { column-count: 5; }
+
+  .entry, .grid-sizer {
+    display: inline-block;
+    width: 100%;
+    
+  }
+
+  
+}

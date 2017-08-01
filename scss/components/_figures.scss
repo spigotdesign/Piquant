@@ -1,0 +1,18 @@
+/*
+ * Figures & Captions
+ *
+ * @package   Sass Stylesheet
+ * @version   1.0
+ *
+ */
+
+.wp-caption { position: relative; }
+
+.wp-caption-text {
+	padding:    0.75rem;
+	font-size:  0.875rem;
+}
+
+iframe, .embed-youtube, .embed-vimeo  {
+  margin-bottom: 2em;
+}

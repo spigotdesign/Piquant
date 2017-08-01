@@ -1,0 +1,16 @@
+//
+// Column Styles
+//
+
+.col {
+
+	&.light {
+		background-color: $light-column;
+	}
+
+	&.dark {
+		background-color: $dark-column;
+		color: $dark-column-text;
+
+	}
+}

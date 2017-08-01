@@ -1,0 +1,133 @@
+//
+// Comments
+//
+
+// Conversation
+
+.conversation {
+  max-width: $site-width;
+  margin: 0 auto;
+  padding: 24px 0;
+  border-radius: 3px;
+
+  @include mq(tablet-landscape-up) {
+    padding-left: 20%;
+  }
+}
+
+.comment, .pingback {
+  margin-bottom: 24px;
+  border-bottom: 1px solid $border-color;
+}
+
+.pingback {
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+}
+
+.comment-meta {
+  font-size: 14px;
+  margin-bottom: 1em;
+
+  @include group;
+}
+
+.comments-number {
+    text-align: center;
+    @include font-size(21px);
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 24px;
+}
+
+.children {
+  padding-left: 48px;
+}
+
+img.avatar {
+  width: 5em;
+  height: 5em;
+  float: left;
+  margin: 0 1em 0 0;
+
+  @include group;
+
+  border-radius: 50px;
+  top: -10px;
+}
+
+.comment-meta {
+  .comment-author {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+  }
+}
+
+.comment-content {
+  clear: both;
+
+  p {
+    margin-bottom: 1em;
+  }
+}
+
+.comment-reply-link {
+  text-transform: uppercase;
+  font-size: 12px;
+  border: 1px solid $border-color;
+  padding: .25em .5em;
+  position: relative;
+  bottom: 0;
+  border-bottom: none;
+}
+
+/* Comment text */
+
+/* Comment form elements */
+#respond {
+  label {
+    display: block;
+    text-transform: uppercase;
+    padding-left: 3px;
+
+    &.subscribe-label {
+      display: inline;
+    }
+  }
+
+  form p {
+    margin-bottom: 10px;
+
+    @include font-size(13px);
+
+    text-transform: uppercase;
+  }
+
+  textarea {
+    width: 100%;
+
+    //padding: 10px 15px;
+ 
+  }
+
+  input {
+    &[type=text], &[type=email], &[type=url] {
+      width: 100%;
+    }
+  }
+}
+
+.comment-form-email, .comment-form-url {
+  width: 48.5%;
+  float: left;
+}
+
+.comment-form-url {
+  float: right;
+}
+
+.comments {
+  article {
+
+  }
+}

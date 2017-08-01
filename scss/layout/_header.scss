@@ -1,0 +1,27 @@
+//
+// Site Header
+//
+
+.site-header {
+  position: absolute;
+  width: 100%;
+  background-color: rgba($white, 1);
+  padding: ($margin / 2) 0;
+  z-index: 3;
+  background-clip: padding-box;
+  z-index: 100;
+  //margin: 10px 0;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+
+  display: flex;
+
+  @include mq(tablet-portrait-up) {
+    position: fixed;
+  }
+
+  .site-nav {
+    flex-flow: 0 1 90%;
+  }
+
+  
+}

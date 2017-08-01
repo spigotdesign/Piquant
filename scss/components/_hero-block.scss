@@ -1,0 +1,70 @@
+//
+// Hero Block
+//
+
+.hero-text {
+	padding: $margin * 2 $margin;
+
+	@include mq(tablet-landscape-up) {
+		padding: $margin * 5 0;
+	}
+
+	p {
+		color: $gray-light;
+		text-align: center;
+		font-size: 120%;
+
+		@include mq(tablet-landscape-up ) {
+			font-size: 190%;
+		}
+
+	}
+	p:last-child {
+		margin-bottom: 0;
+	}
+	
+
+	
+}
+
+// Move this 
+
+.fl-module-content-slider {
+	//background-color: red;
+
+	.fl-slide-foreground {
+		display: flex;
+	}
+
+	.fl-slide-photo-wrap {
+		flex: 0 1 50%;
+		float: none;
+		background-size: cover;
+		background-position: center;
+
+
+		// display: flex;
+	}
+
+	.fl-slide-photo {
+		margin: 0 !important;
+		height: 100%;
+		width: 100%;
+		background-size: cover;
+		
+	}
+
+	.fl-slide-photo-img {
+		display: none;
+	}
+
+	.fl-slide-text-right {
+		.fl-slide-content-wrap {
+			order: 2;
+		}
+
+		.fl-slide-photo-wrap {
+			order: 1;
+		}
+	}
+}

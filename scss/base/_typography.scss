@@ -1,0 +1,90 @@
+/*
+ * Typography
+ *
+ *
+ */
+
+p {
+  
+  margin-bottom: 24px;
+  
+}
+
+// Headings
+
+h1, h2, h3, h4, h5, h6 {
+  font-family:      $headingsFontFamily;
+  font-weight:      $headingsFontWeight;
+  color:            $headingsColor;
+  text-rendering:   optimizelegibility; // Fix the character spacing for headings
+  margin-bottom:    $margin;
+  line-height:  	1.2;
+
+}
+
+h1, .h1 {
+  @include font-size(47px);
+  line-height: 1.2;
+  font-weight: $light-font-weight;
+
+  
+}
+
+h2, .h2 {
+  @include font-size(37px);
+
+}
+
+h3, .h3 {
+  @include font-size(27px);
+  //font-weight: $bold-font-weight;
+  margin-bottom: 12px;
+
+}
+
+h4, .h4 {
+  @include font-size(18px);
+  	
+  font-weight: $normal-font-weight;
+  margin-bottom: $margin / 2;
+
+}
+
+h5, .h5 {
+  @include font-size(16px);
+  font-weight: $bold-font-weight;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+
+}
+
+h6, .h6 {
+  font-weight: $bold-font-weight;
+
+}
+
+
+ul, ol {
+
+  .page-content & {
+
+    padding-left: $margin / 4;
+    list-style-position: inside;
+    margin: $margin 0;
+  }
+}
+
+blockquote {
+  font-style: italic;
+  @include font-size(32px);
+  color: $gray;
+  text-align: center;
+  font-weight: $light-font-weight;
+}
+
+cite {
+  font-style: normal;
+  font-weight: $bold-font-weight;
+}
+
+

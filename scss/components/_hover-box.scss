@@ -1,0 +1,85 @@
+//
+// Hover Box
+//
+
+.hover-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+
+  //height: calc(#{$site-width} / 3);
+  min-height: 420px;
+  background-size: cover;
+  background-position: center;
+  color: $white;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    content: " "!important;
+    background-color: $hover-box-overlay;
+    opacity: 0;
+    transition: .3s opacity ease;
+    z-index: 1;
+  }
+
+  &:hover {
+    
+
+    &:after {
+      opacity: 1;
+      content: " "!important;
+      display: block;
+    }
+
+    .fl-callout-text-wrap {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .fl-callout-content {
+      transform: translate3d(0, 0, 0);
+      display: block;
+      position: relative;
+      z-index: 3;
+    }
+  }
+
+  .callout-link {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  h2 {
+    a {
+      color: $white;
+    }
+  }
+
+  .fl-callout-content {
+    transition: all .3s ease;
+    transform: translate3d(0, 30%, 0);
+    z-index: 3;
+  }
+
+  .fl-callout-text-wrap {
+    opacity: 0;
+    transition: all .3s ease;
+    transform: translate3d(0, 50%, 0);
+    max-width: 600px;
+    margin: auto;
+  }
+}
+

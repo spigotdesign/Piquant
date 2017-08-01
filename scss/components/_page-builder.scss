@@ -1,0 +1,71 @@
+//
+// Page Builder  (Beaver Builder)
+//
+
+// Custom Page builder styles
+
+.yellow-grad {
+	/* Rectangle 4 Copy: */
+background-image: linear-gradient(90deg, rgba(76,228,239,0.39) 0%, rgba(140,215,27,0.39) 100%);
+}
+
+.fl-callout {
+
+  h3 {
+    @include font-size(15px);
+    font-weight: $bold-font-weight;
+    text-transform: uppercase;
+  }
+
+  p {
+    @include font-size(14px);
+    padding: 0 20px;
+  }
+}
+
+// Beaver Builder Utilites
+
+.mobile-left-center {
+  text-align: left;
+
+  @include mq(phone-only) {
+    text-align: center;
+  }
+}
+
+.mobile-right-center {
+  text-align: right;
+
+  @include mq(phone-only) {
+    text-align: center;
+  }
+}
+
+// Beaver Builder Helpers
+
+.fl-builder-content {
+  width: 100%;
+}
+
+.fl-row-content {
+  &.fl-row-fixed-width {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include mq(desktop-up) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .fl-row-content .fl-col-small {
+    max-width: 100%;
+  }
+}
+
+.fl-accordion-button {
+  outline: none;
+}
+

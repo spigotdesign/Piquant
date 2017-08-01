@@ -1,0 +1,37 @@
+//
+// Callout Box
+//
+
+
+.fl-callout {
+	//text-align: center;
+	//padding: $margin $margin * 2;
+
+	h2 {
+		//font-size: 29px;
+	}
+}
+
+.callout-row {
+	color: rgba($white, .8);
+
+	.fl-callout-title {
+		color: $white;
+		padding-bottom: 48px;
+
+	}
+}
+
+.intro-content {
+	@include font-size(24px);
+	color: $gray;
+	text-align: center;
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	@include mq(768) {
+		text-align: left;
+	}
+}

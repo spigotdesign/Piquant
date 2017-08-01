@@ -1,0 +1,236 @@
+//
+// Site Nav
+//
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  background-color: $nav-bg-color;
+  margin: 0 auto;
+  //padding: 0 ($margin / 2);
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+  width: 100%;
+  max-width: $site-width;
+
+  @include mq(tablet-portrait-up) {
+    //padding: 0 $margin;
+    overflow: visible;
+  }
+
+  .wrapper {
+    display: flex;
+    position: relative;
+
+    .open & {
+      flex-direction: column;
+    }
+  }
+
+
+  .open & {
+    flex-direction: column;
+
+    //padding: 0;
+    height: auto;
+    //padding: 0;
+  }
+
+  &_home { // Logo
+    display: flex;
+    //align-self: center;
+    //top: 9px;
+    position: relative;
+    padding-left: $margin;
+
+    @include mq(desktop-up) {
+      padding-left: 0;
+    }
+
+    svg {
+      width: 180px;
+      height: 46px;
+    }
+
+    .fc {
+      padding-left: 24px;
+      display: none; 
+
+      @include mq(375) {
+        display: inherit;
+      }
+
+      svg {
+        width: 111px;
+        height: 31px;
+      }
+    }
+  }
+
+  // Unordered List
+  &_primary {
+    list-style: none;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: $gray-darkest;
+    padding-right: $margin * 3;
+    //text-align: center;
+
+    @include mq($desktop) {
+      visibility: visible;
+      opacity: 1;
+      flex-flow: row nowrap;
+      height: auto;
+      width: auto;
+      background-color: transparent;
+      position: relative;
+      width: auto;
+      padding-top: 0;
+      top: 0;
+
+      //text-align: center;
+    }
+
+
+    .open & {
+      visibility: visible;
+      opacity: 1;
+      height: auto;
+      padding: $margin;
+      margin-top: $margin;
+    }
+  }
+
+  // List Items
+  .menu-item {
+    //font-weight: bold;
+    position: relative;
+
+    //text-transform: uppercase;
+
+    // desktop
+    @include mq($desktop) {
+      display: inline-block;
+    }
+
+
+    > a {
+      padding: 12px 12px 20px 12px;
+      display: block;
+      color: $nav-item-color;
+
+      &:hover {
+        background-color: $nav-item-bg-color-hover;
+        color: $nav-item-color-hover;
+      }
+
+      .open & {
+        padding-top: $margin / 3;
+        padding-bottom: $margin / 3;
+        font-size: 120%;
+
+  
+      }
+    }
+
+    &.current-menu-item, &.current-menu-parent {
+      background-color: $nav-item-bg-color-hover;
+      color: $nav-item-color-hover;
+
+      > a {
+        color: $nav-item-color-active;
+      }
+    }
+
+    &--active > a {
+      //@include nav-link-hover;
+   
+    }
+
+    .open & {
+      @include font-size(16px);
+
+      //font-weight: lighter;
+      margin-left: -12px;
+      margin-right: -12px;
+    }
+
+    // Dropdowns
+
+    &:hover {
+      visibility: inherit;
+
+      > ul {
+        z-index: 99;
+        visibility: visible;
+        opacity: 1;
+
+        //left: -50%;
+
+        // MQ Dropdowns
+        @include mq($desktop) {
+          top: 58px;
+        }
+
+
+        ul {
+          @include mq($desktop) {
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  // Sub Menu
+  .sub-menu {
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 1px 3px rgba($black, .3);
+
+    @include mq($desktop) {
+      background-color: $subnav-background-color;
+      opacity: 0;
+      position: absolute;
+      top: 60px;
+      visibility: hidden;
+      width: 240px;
+      left: 0;
+      transition: all .3s ease-in-out;
+
+    }
+
+
+    .menu-item {
+      > a {
+        transition: all .3s ease-in-out;
+        @include mq($desktop) {
+          padding: 12px;
+        }
+
+
+        &:hover {
+          background-color: $blue;
+          color: $white;
+       
+        }
+
+        .open & {
+          padding-left: 36px;
+          font-size: 90%;
+
+    
+        }
+      }
+    }
+  }
+}

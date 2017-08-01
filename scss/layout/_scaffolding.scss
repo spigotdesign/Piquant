@@ -1,0 +1,69 @@
+//
+// Site Scaffolding
+//
+
+.content {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.layout-2c-l {
+  // Sidebar
+
+  .content {
+    max-width: $site-width;
+    display: flex;
+    flex-direction: column;
+    padding: ($margin * 3) $margin;
+
+    @include mq(tablet-portrait-up) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+
+    .page-content {
+      flex: 0 0 70%;
+    }
+
+    .sidebar-primary {
+      flex: 0 0 25%;
+    }
+  }
+}
+
+.contained {
+  margin: ($margin / 2) auto;
+  max-width: $site-width;
+  padding: 0 24px;
+
+  @include mq(tablet-portrait-up) {
+    margin: ($margin * 2) auto;
+  }
+
+
+  @include mq($site-width) {
+    padding: 0;
+  }
+}
+
+.content {
+  display: flex;
+
+  .page-template-default:not(.fl-builder) & {
+    padding: ($margin * 5) $margin;
+    max-width: $site-width;
+  }
+
+  .singular-post & {
+    padding: ($margin * 2) $margin;
+    max-width: $site-width;
+  }
+}
+
+.page-content {
+	width: 100%;
+  overflow: hidden;
+}

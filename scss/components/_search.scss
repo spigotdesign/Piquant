@@ -1,0 +1,155 @@
+/*
+ * Search
+ *
+ * @package   Sass Stylesheet
+ * @version   1.0
+ *
+ */
+
+.search-form {
+  margin: 0;
+  position: relative;
+  right: 0;
+  top: -10px;
+  display: none;
+
+  //z-index: 50000;
+  margin-top: 8px;
+
+  @include mq($desktop) {
+    position: absolute;
+    padding-left: 12px;
+    margin-top: 0;
+    display: inherit;
+  }
+
+
+  .open & {
+    display: inherit;
+  }
+
+  @include placeholder {
+    color: $gray-lightest;
+    font-family: $font-family;
+    font-weight: normal;
+  }
+
+
+  form {
+    margin: 0;
+  }
+
+  input[type="submit"] {
+    display: none;
+  }
+
+  input[type="search"] {
+    //display: none;
+    width: 0;
+    height: 62px;
+    text-indent: 20px;
+    cursor: pointer;
+    border: none;
+    padding: 3px 24px;
+    font-size: 1em;
+    font-family: $font-family;
+    font-weight: normal;
+    transition: all 0.5s ease-in-out;
+
+    /* Rectangle 3: */
+    background: transparent url(img/icons/search.svg) 0.25em 50% no-repeat;
+    color: $white;
+    margin: 0;
+    box-sizing: content-box;
+    outline: none;
+
+    @include mq($desktop) {
+      width: 0;
+    }
+  }
+
+  input[type="search"]:focus {
+    width: 100%;
+    outline: none;
+    background: $blue url(img/icons/search-focus.svg) 0.875em 50% no-repeat;
+
+    //color: $grayLightest;
+    //font-family: $sansFontFamily;
+    box-shadow: none;
+    cursor: text;
+    transition: all 0.5s ease-in-out;
+
+    @include mq(480) {
+      width: 30em;
+    }
+  }
+}
+
+.gallery-searchform {
+  border: 1px solid $border-color;
+  height: 35px;
+  width: 320px;
+  position: relative;
+
+  @include placeholder {
+    color: $gray;
+    font-family: $font-family;
+    font-weight: normal;
+    line-height: 1.5;
+  }
+
+
+  input[type="search"] {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 35px;
+    width: 295px;
+    font-family: $font-family;
+    font-weight: normal;
+    display: flex;
+  }
+
+  input[type="search"]:focus {
+    box-shadow: none;
+  }
+
+  input[type="submit"] {
+    border: none;
+    background: transparent url(img/icons/search.svg) center center no-repeat;
+    height: 35px;
+    width: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+  }
+}
+
+.search {
+  .nothing-found {
+    margin: 0 auto;
+  }
+}
+
+.content {
+  .search-form {
+    position: relative;
+    width: 320px;
+    padding: 0;
+    margin: 0 auto;
+
+    input {
+      background-color: $gray-darkest;
+      width: 320px;
+      background-position: 15px 50%;
+
+      &:focus {
+        width: 320px;
+        background-position: 15px 50%;
+      }
+    }
+  }
+}

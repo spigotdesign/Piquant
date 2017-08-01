@@ -1,0 +1,10 @@
+
+# Ignore Node files
+node_modules
+
+# Ignore cache files
+.sass-cache
+
+# Ignore OS X files
+.DS_Store
+

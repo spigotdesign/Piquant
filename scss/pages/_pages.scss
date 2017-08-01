@@ -1,0 +1,39 @@
+//
+// Pages
+//
+
+.page-header {
+	
+
+
+	> .fl-row-content-wrap {
+		min-height: 350px;
+		height: 39vh;
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		text-align: center;
+
+		.home & {
+			min-height: 500px;
+			height: 50vh;
+		}
+		
+	}
+
+	.fl-row-content {
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.btn {
+		border-color: $white;
+
+		&:hover {
+			background-color: $white;
+			color: $black !important;
+		}
+	}
+}

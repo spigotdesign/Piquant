@@ -1,0 +1,111 @@
+/*
+ * Footer
+ *
+ * @package   Sass Stylesheet
+ * @version   1.0
+ *
+ */
+
+.site-footer {
+  background-color: $white;
+  padding: 40px 20px;
+
+  //display: flex;
+  @include mq(desktop-up) {
+    padding: 40px 0;
+  }
+
+
+  .wrapper {
+    max-width: $site-width;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: flex-start;
+
+    @include mq(tablet-portrait-up) {
+      display: flex;
+    }
+  }
+}
+
+.site_info {
+  flex: 0 1 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-bottom: 80px;
+
+  @include mq(tablet-portrait-up) {
+    flex-basis: 25%;
+  }
+
+  .site-nav_home{
+    flex: 0 1 100%;
+
+    svg {
+      margin: 0 auto 20px; 
+    }
+  }
+
+  .btn {
+    border: 1px solid $blue;
+    display: block;
+    //margin-top: 15px;
+    padding: 1px 20px;
+  }
+}
+
+.site_feed {
+  flex: 0 1 100%;
+
+  @include mq(tablet-portrait-up) {
+    flex-basis: 75%;
+  }
+
+
+  h3 {
+    flex-basis: 100%;
+
+    @include font-size(19px);
+
+    font-weight: $bold-font-weight;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+}
+
+.feed {
+  display: flex;
+  flex-flow: row wrap;
+
+  article {
+    flex: 0 1 33.33333%;
+    padding-right: 7.5%;
+    margin-bottom: 20px;
+
+    h2 {
+      @include font-size(15px);
+
+      font-weight: $bold-font-weight;
+
+      a {
+        color: $text-color;
+      }
+    }
+  }
+}
+
+p.credit {
+  //text-align: center;
+  color: $gray;
+  margin: $margin 0;
+
+  //align-self: flex-end;
+
+  @include font-size(12px);
+
+  a {
+    color: $gray;
+    text-decoration: underline;
+  }
+}

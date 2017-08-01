@@ -1,0 +1,74 @@
+/*!
+ Theme Name:    Piquant 
+ Theme URI:    	http://spigotdesign.com/
+ Author:        Spigot
+ Description:   Description: A custom theme built on the rock-solid Hybrid Core theme framework. It's built with search-engine optimization (SEO) in mind by utilizing the most current HTML5 conventions and <a href="http://schema.org">Schema.org</a> microdata.
+ Version:       1.0
+ Text Domain: 	piquant
+ License:     	GNU General Public License v2.0 or later
+ License URI: 	http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+// 1. Congiguration and Helpers
+
+@import "abstracts/colors";
+@import "abstracts/mixins";
+@import "abstracts/type-settings";
+@import "abstracts/variables";
+@import "abstracts/widths";
+@import "abstracts/media-queries";
+
+// 2. Vendors
+
+@import "vendor/normalize";
+@import "vendor/reset";
+
+// 3. Base
+
+@import "base/site";
+@import "base/fonts";
+@import "base/typography";
+@import "base/utilities";
+
+// 4. Layout
+
+@import "layout/grid";
+@import "layout/scaffolding";
+@import "layout/header";
+@import "layout/pagination";
+@import "layout/page-head";
+@import "layout/footer";
+@import "layout/loop-nav";
+@import "layout/site-nav";
+@import "layout/sidebars";
+
+// 5. Components
+
+@import "components/animations";
+@import "components/buttons";
+@import "components/figures";
+//@import "components/forms";
+@import "components/images";
+@import "components/links";
+//@import "components/marquee";
+@import "components/search";
+@import "components/tables";
+@import "components/toggle-menu";
+@import "components/hover-box";
+@import "components/callout-box";
+@import "components/img-block";
+@import "components/hero-block";
+@import "components/content-box";
+@import "components/testimonials";
+@import "components/comments";
+@import "components/instafeed";
+@import "components/page-builder";
+
+// 6. Pages & Sections
+
+@import "pages/posts";
+@import "pages/pages";
+
+// 7. Themes
+@import "themes/column-styles";
+
